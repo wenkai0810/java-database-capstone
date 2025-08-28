@@ -7,19 +7,19 @@ import com.project.back_end.models.Patient;
 import com.project.back_end.repo.AdminRepository;
 import com.project.back_end.repo.DoctorRepository;
 import com.project.back_end.repo.PatientRepository;
-//import com.project.back_end.services.TokenService;
-//import org.springframework.beans.factory.annotation.Autowired;
+import com.project.back_end.services.TokenService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
-//@Service // 1. Spring-managed service component
-public class Service {
+@Service // 1. Spring-managed service component
+public class AppService {
 
     public final TokenService tokenService;
     private final AdminRepository adminRepository;
@@ -30,7 +30,7 @@ public class Service {
 
     // 2. Constructor Injection
     //@Autowired
-    public Service(TokenService tokenService,
+    public AppService(TokenService tokenService,
                    AdminRepository adminRepository,
                    DoctorRepository doctorRepository,
                    PatientRepository patientRepository,
